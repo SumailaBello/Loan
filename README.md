@@ -1,6 +1,9 @@
-# MdbAngularFree
+# Loan Dashboard template
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2 and is configured for heroku deployment.
+
+## DEMO Version
+View demo version hosted on heroku https://loan-template.herokuapp.com/
 
 ## Development server
 

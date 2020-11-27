@@ -1,12 +1,12 @@
 <div class="container-fluid" style="height: 100vh;" id="main-container">
     <div class="row" style="height: 100%; z-index: 1000;">
-        <div class="col p-3" id="img-col" style="height: 100%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; z-index: 1000;">
+        <div class="d-none d-lg-inline col-lg p-3" id="img-col" style="height: 100%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; z-index: 1000;">
             <h3 class="h3-responsive white-text">Loan <i class="fas fa-dot-circle ml-2"></i></h3>
             <img src="../../assets/img/login4.svg" alt="" style="width: 100%; height: 100%;">
         </div>
         <!-- form col -->
-        <div class="col" style="height: 100%; border-top-left-radius: 50%; border-bottom-left-radius: 50%;" id="form-col">
-            <div class="row bg-white border-radius mx-5 mt-3 hover float-right" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; width: 70%;">
+        <div class="col-12 col-lg" style="height: 100%; border-top-left-radius: 50%; border-bottom-left-radius: 50%;" id="form-col">
+            <div class="row bg-white border-radius mx-1 mx-lg-5 hover float-right" id="segment-btn" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s;">
                 <div class="col border-radius text-center p-2 segment" [class.bg-primary] = "this.segment == 'login'" [class.white-text] = "this.segment == 'login'" (click) = "switchSegment('login')">
                     Login
                     <!-- <button class="btn btn-bg btn-block white-text float-right m-0"> <mdb-icon fas icon="sign-in-alt"></mdb-icon> login </button> -->
@@ -17,7 +17,7 @@
                 </div>
             </div>
             <!-- login segment -->
-            <div *ngIf = "segment =='login'" class="card-type bg-white border-radius p-5 mt-4 mx-5 float-right animate__animated animate__slideInLeft animate__faster" style="width: 70%;">
+            <div *ngIf = "segment =='login'" id="login-segment" class="card-type bg-white border-radius p-5 mx-1 mx-lg-5 float-right animate__animated animate__slideInLeft animate__faster">
                 <h4 class="h4-responsive text-dark font-weight-bold">login</h4>
                 <form #loginForm = "ngForm" method = "POST">
                     <!-- login -->
@@ -44,7 +44,7 @@
                 </div>
             </div>
             <!-- register segment -->
-            <div *ngIf = "segment =='register'" class="card-type bg-white border-radius py-3 px-5 mx-5 mt-4 float-right animate__animated animate__slideInLeft animate__faster" style="width: 70%;">
+            <div *ngIf = "segment =='register'" id="reg-segment" class="card-type bg-white border-radius py-3 px-5 mx-1 mx-lg-5 mt-4 float-right animate__animated animate__slideInLeft animate__faster">
                 <h4 class="h4-responsive text-dark font-weight-bold">register</h4>
                 <form #regForm = "ngForm" method = "POST">
                     <!-- name -->

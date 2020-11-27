@@ -8,6 +8,38 @@
     background-color:#ec008c;
     // background-image: linear-gradient(315deg, #ec008c 0%, #f5f4f2 74%);
 }
-// #form-col, 
-// background-color: #f5f4f2;
-// background-image: linear-gradient(315deg, #f5f4f2 0%, #ff4081 74%);
+
+// segment switch button width
+#segment-btn {
+    width: 70%;
+    margin-top: 15px;
+}
+
+// login segment containing login form
+#login-segment {
+    width: 70%;
+    margin-top: 30px;
+}
+
+// reg segment containing register form
+#reg-segment {
+    width: 70%;
+}
+// project uses two major breakpoints which is large and small
+@media (max-width: 990px) {
+    #segment-btn {
+        width: 100%;
+        // margin-top: 20%;
+    }
+
+    // login segment containing login form
+    #login-segment {
+        width: 100%;
+        margin-top: 20%;
+    }
+
+    // reg segment containing register form
+    #reg-segment {
+        width: 100%;
+    }
+}

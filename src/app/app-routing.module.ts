@@ -10,7 +10,7 @@ import { IncomesourcesComponent } from './dashboard/incomesources/incomesources.
 import { RoicalculatorComponent } from './dashboard/roicalculator/roicalculator.component';
 
 const routes: Routes = [
-  { path: '/', component: LoginComponent },
+  { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent,
   children: [

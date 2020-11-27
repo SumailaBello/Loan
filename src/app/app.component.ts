@@ -8,11 +8,11 @@ import { DataService } from './data.service';
 })
 export class AppComponent {
 
-  title = 'Shecluded';
+  title = 'Loan';
   
   constructor(public data: DataService) {}
 
   ngOnInit() {
-    // this.data.router.navigateByUrl('/login')
+    this.data.router.navigateByUrl('/login')
   }
 }
