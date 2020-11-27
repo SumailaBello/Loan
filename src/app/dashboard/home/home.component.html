@@ -1,0 +1,65 @@
+<div class="w3-container">
+    <div class="contaner-fluid">
+        <div class="row">
+            <div class="col" style="position: relative;">
+                <div class="p-2 mt-2 mb-5 card-type text-center" style="border-radius: 30px; position: relative;">
+                    <h3 class="h3-responsive">Welcome back, Jane Doe</h3>
+                    <p class="text-pink">Lorem ipsum dolor sit amet consecteur amet.</p>
+                    <p><button class="btn btn-bg white-text"><mdb-icon fas icon="info-circle" ></mdb-icon> apply for a loan </button></p>
+                    <!-- <span style="height: 100px; width: 100px; position: absolute; top: -10;" class="text-right">
+                        <img src="../../../assets/img/happy_news.svg" class="" style="height: 150px; width: 150px;" alt="" >
+                    </span> -->
+                    <div class="text-danger hover hover-effect" style="position: absolute; top: 0; left: 95%;"><mdb-icon fas icon="times-circle 2x"></mdb-icon></div>
+                </div>
+                <img src="../../../assets/img/happy_news.svg" class="" style="height: 25%; width: 40%; position: absolute; left: 70%; bottom: 70%;" alt="" >
+                <h6 class="h6-responsive text-dark font-weight-bold">Overview 
+                    <button class="btn btn-bg white-text ml-1 btn-sm"> <mdb-icon fas icon="plus"></mdb-icon> Card </button>
+                </h6>
+                <div class="row card-type border-radius bg-shade text-capitalize">
+                    <div class="col m-3 card-type text-center bg-white p-1 border-radius hover-effect">
+                        <mdb-icon fas icon="money-bill-alt" class="text-dark" size = "2x"></mdb-icon>
+                        <h3 class="text-primary h3-responsive">100,000</h3>
+                        <p>Amount Loaned</p>
+                    </div>
+                    <div class="col m-3 card-type text-center bg-white p-1 border-radius hover-effect">
+                        <mdb-icon fas icon="hand-holding-usd" class="text-dark" size = "2x"></mdb-icon>
+                        <h3 class="text-primary h3-responsive">15,000</h3>
+                        <p>Amount payable</p>
+                    </div>
+                    <div class="col m-3 card-type text-center bg-white p-1 border-radius hover-effect">
+                        <mdb-icon fas icon="file-invoice-dollar" class="text-dark" size = "2x"></mdb-icon>
+                        <h3 class="text-primary h3-responsive">85,000</h3>
+                        <p>Amount paid</p>
+                    </div>
+                </div>
+                
+                <h6 class="h6-responsive text-dark mt-4">Others</h6>
+                <div class="row card-type border-radius">
+                    <div class="col-12">
+                        <h6 class="h6-responsive text-dark float-left">My Transactions</h6>
+                        <button class="btn btn-bg white-text float-right"> view all <mdb-icon fas icon="eye"></mdb-icon></button>
+                    </div>
+                    <div class="col">
+                        <table mdbTable>
+                            <thead>
+                              <tr>
+                                <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr mdbTableCol *ngFor="let el of elements">
+                                <th scope="row">{{el.id}}</th>
+                                <td>{{el.first}}</td>
+                                <td>{{el.last}}</td>
+                                <td>{{el.handle}}</td>
+                                <td>{{el.amount}}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

@@ -1,0 +1,115 @@
+<div class="w3-sidebar w3-bar-block w3-collapse bg-primary w3-animate-left pt-4" style="width:200px; border-top-right-radius: 30px; border-bottom-right-radius: 30px; overflow-x: hidden;" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large w3-hide-large" (click) = "this.w3_close()">Close &times;</button>
+    <div class="row">
+        <div class="col text-center">
+            <!-- <img class="img-responsive" src="../../assets/img/logo.png" alt="" style="height: 5rem; width: 10rem;"> -->
+            <h3 class="h3-responsive white-text">Loan <i class="fas fa-dot-circle ml-2"></i></h3>
+        </div>
+    </div>
+    <div class="row mt-5 ml-3 white-text">
+        <div class="col-12 mb-1 p-3" [class.active-link] = "currentRoute == '/dashboard/home'" >
+            <!-- <i class="fas fa-th-large mr-3"></i> <a routerLink="/dashboard/home">Dashboard</a> -->
+            <mdb-icon fas icon="desktop" class="mr-2"></mdb-icon> <a routerLink="/dashboard/home">Dashboard</a>
+        </div>
+        <div class="col-12 mb-1 p-3" [class.active-link] = "currentRoute == '/dashboard/myloans'">
+            <i class="fas fa-scroll mr-3"></i> <a routerLink="/dashboard/myloans">My Loans</a>
+        </div>
+        <div class="col-12 mb-1 p-3" [class.active-link] = "currentRoute == '/dashboard/loancourse'">
+            <mdb-icon fas icon="graduation-cap" class="mr-2"></mdb-icon> <a routerLink="/dashboard/loancourse">Take Loan Course</a>
+        </div>
+        <div class="col-12 mb-1 p-3" [class.active-link] = "currentRoute == '/dashboard/transactions'">
+            <i class="fas fa-credit-card mr-3"></i> <a routerLink="/dashboard/transactions">Transactions</a>
+        </div>
+        <div class="col-12 mb-1 p-3" [class.active-link] = "currentRoute == '/dashboard/incomesources'">
+            <mdb-icon fas icon="money-check-alt" class="mr-2"></mdb-icon> <a routerLink="/dashboard/incomesources">Income Sources</a>
+        </div>
+        <div class="col-12 p-3" [class.active-link] = "currentRoute == '/dashboard/roicalculator'">
+            <mdb-icon fas icon="calculator" class="mr-2"></mdb-icon> <a routerLink="/dashboard/roicalculator">ROI Calculator</a>
+        </div>
+        <div class="col-12 fixed-bottom p-3">
+            <button class="btn btn-default btn-sm white-text" (click) = "logout()"><mdb-icon fas icon="sign-out-alt" class="ml-1 mr-1"></mdb-icon>Logout</button>
+        </div>
+    </div>
+       
+</div>
+  
+<div class="w3-main" style="margin-left:200px;">
+    <div class="">
+        <button class="w3-button w3-teal w3-xlarge w3-hide-large" (click)="this.w3_open()">&#9776;</button>
+        <div class="w3-container">
+            <div class="row">
+                <!-- main-col-1 -->
+                <div class="col-9 pt-3">
+                    <!-- sub row -->
+                    <div class="row container-fluid">
+                        <div class="col">
+                            <h3 class = "h3-responsive">Dashboard</h3>
+                        </div>
+                        <div class="col pt-3 text-right">
+                            <mdb-icon fas icon="search" class="m-2" style="cursor: pointer;"></mdb-icon><mdb-icon far icon="bell" class="m-2" style="cursor: pointer;"></mdb-icon> <mdb-icon class="hover m-2" fas icon="info-circle"></mdb-icon>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                                  
+                            <router-outlet>
+
+                            </router-outlet>
+                        </div>
+                    </div>
+                </div>
+                <!-- main col-2 -->
+                <div class="col bg-grey card-type p-3" style="height: 100vh; border-top-left-radius: 30px; border-bottom-left-radius: 30px;">
+                    <!-- Default inline form -->
+                    <!-- <form class="form-inline" style="border-radius: 10px !important;">
+                                
+                        <label class="sr-only" for="inlineFormInputGroupUsername2">Search</label>
+                        <div class="input-group mb-2 mr-sm-2" style="border-radius: 10px !important;">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><mdb-icon fas icon="search"></mdb-icon></div>
+                        </div>
+                        <input mdbInput type="text" class="form-control py-0" id="inlineFormInputGroupUsername2" placeholder="Search">
+                        </div> -->
+                        <!-- <button type="submit" mdbBtn color="primary" class="mt-0">Submit</button> -->
+                    <!-- </form> -->
+                    <!-- Default inline form -->  
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="text-center">
+                                <small class="font-weight-bold text-dark">Profile</small>
+                            </div>
+                            <div class="card-type text-center bg-shade mt-3" style="border-radius: 30px; width: 100%;">
+                                <img src="https://randomuser.me/api/portraits/women/36.jpg" alt="" style="height: 100px; width: 100px; border-radius: 50%">
+                                <div>
+                                    <p>Jane Doe</p>
+                                    <div>
+                                        <span class="m-2"><mdb-icon fab icon="facebook-f"></mdb-icon></span>
+                                        <span class="m-2"><mdb-icon fab icon="twitter"></mdb-icon></span>
+                                        <span class="m-2"><mdb-icon fab icon="instagram"></mdb-icon></span>
+                                    </div>
+                                    <button class="btn btn-outline mt-1"> <mdb-icon fas icon="pen"></mdb-icon> Edit profile </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col"></div>
+                    </div>  
+                    <hr style="background-color: #ec008c; height: 1px;">   
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- <small><strong class="text-dark font-weight-bold">Today:</strong> {{this.data.date | date: 'dd/MM/y'}}</small> -->
+                            <small><strong class="text-dark font-weight-bold">Today: </strong> {{this.date | date: 'dd/MM/y'}}</small>
+                        </div>
+                        <div class="col-12">
+                            <div class="card-type text-center bg-white border-radius p-4 mt-3 hover-effect">
+                                <mdb-icon fas icon="calendar-day" size = "2x" class="text-dark"></mdb-icon>
+                                <h3 class="h3-responsive text-primary">15, Dec, 2020</h3>
+                                <p>Next Payment</p>
+                            </div>
+                        </div>
+                    </div>         
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

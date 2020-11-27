@@ -1,0 +1,93 @@
+<div class="w3-container">
+    <h6 class="h6-responsive text-dark font-weight-bold">My loans</h6>
+            <!-- main row -->
+            <div class="row mt-3">
+                <!-- main col 1-->
+                <div class="col mr-lg-2">
+                    <!-- sub row 1-->
+                            <div class="card-type bg-white border-radius p-3">
+                                <div class="border-bottom">
+                                    <small class=""> Credit amount</small>
+                                    <h2 class="h2-responsive text-primary">$100,000.00</h2>
+                                </div>
+                                <!-- <hr style="background-color: #ec008c; height: 1px;"> -->
+                                <!-- <hr style="background-color: grey; height: 1px;"> -->
+                                <div class="text-center border-bottom">
+                                    <circle-progress
+                                    [percent]="85"
+                                    [radius]="100"
+                                    [outerStrokeWidth]="16"
+                                    [innerStrokeWidth]="8"
+                                    [outerStrokeColor]="'#ec008c'"
+                                    [innerStrokeColor]="'#fbeee6'"
+                                    [animation]="true"
+                                    [animationDuration]="300"
+                                    ></circle-progress>
+                                    <p>Redeemed</p>
+                                </div>
+                                <!-- <hr style="background-color: grey; height: 1px;"> -->
+                                <div class="row text-center">
+                                    <div class="col border-right">
+                                        <small>Paid</small>
+                                        <h5 class="text-primary">$85,000.00</h5>
+                                    </div>
+                                    <div class="col">
+                                        <small>Amount left</small>
+                                        <h5 class="text-primary">$15,000.00</h5>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                </div>
+                <!-- main col 2-->
+                <div class="col">
+                    <div class="row card-type border-radius p-3">
+                        <div class="col border-right">
+                            <small>Amount due</small>
+                            <h2 class="h2-responsive text-primary">$12500.00</h2>
+                        </div>
+                        <div class="col">
+                            <small>Debt</small>
+                            <h2 class="h2-responsive text-primary">$0</h2>
+                        </div>
+                    </div>
+                    <div class="row card-type border-radius p-3 mt-4">
+                        <div class="col border-right">
+                            <small>Payment date</small>
+                            <div class="mt-5 text-center">
+                                <h2 class="h2-responsive text-primary">15</h2>
+                                <p class="text-muted">December</p>
+                                <p class="text-muted">2020</p>
+                            </div>
+                        </div>
+                        <!-- <div class="col" style="height: 100px; width: 100px; position: relative;" (click) = renderCalendar()> -->
+                        <div class="col text-center">
+                            <circle-progress
+                            [percent]="82"
+                            [radius]="50"
+                            [outerStrokeWidth]="16"
+                            [innerStrokeWidth]="8"
+                            [outerStrokeColor]="'#ec008c'"
+                            [innerStrokeColor]="'#fff'"
+                            [animation]="true"
+                            [animationDuration]="300"
+                            [showUnits] = "false"
+                            [subtitle] = "'days left'"
+                            ></circle-progress>
+                            <!-- [titleFontSize] = "15" -->
+                            <p>Days Left</p>
+                            <!-- <div #calendar class="font-weight-bold" style="height: 100%; width: 50%; transform: scale(0.15, 0.15); position: absolute; top: -35%; left: -10%;"></div> -->
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <button class="btn btn-bg white-text float-right">Make payment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                </div>
+            </div>
+</div>
