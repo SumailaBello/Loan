@@ -13,6 +13,6 @@ export class AppComponent {
   constructor(public data: DataService) {}
 
   ngOnInit() {
-    this.data.router.navigateByUrl('/dashboard/myloans')
+    // this.data.router.navigateByUrl('/login')
   }
 }
