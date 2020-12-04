@@ -2,12 +2,11 @@
     <button class="w3-bar-item w3-button w3-large w3-hide-large" (click) = "this.w3_close()">Close &times;</button>
     <div class="row">
         <div class="col text-center">
-            <!-- <img class="img-responsive" src="../../assets/img/logo.png" alt="" style="height: 5rem; width: 10rem;"> -->
             <h3 class="h3-responsive white-text">Loan <i class="fas fa-dot-circle ml-2"></i></h3>
         </div>
     </div>
     <div class="row mt-5 ml-3 white-text">
-        <div class="col-12 mb-1 p-3" [class.active-link] = "currentRoute == '/dashboard/home'" (click) = "this.w3_close()">
+        <div class="col-12 mb-1 p-3" [class.active-link] = "currentRoute == '/dashboard/home' || currentRoute == '/dashboard'" (click) = "this.w3_close()">
             <!-- <i class="fas fa-th-large mr-3"></i> <a routerLink="/dashboard/home">Dashboard</a> -->
             <mdb-icon fas icon="desktop" class="mr-2"></mdb-icon> <a routerLink="/dashboard/home">Dashboard</a>
         </div>
@@ -48,15 +47,11 @@
                                 <mdb-icon fas icon="search" class="m-2" style="cursor: pointer;"></mdb-icon><mdb-icon far icon="bell" class="m-2" style="cursor: pointer;"></mdb-icon> <mdb-icon class="hover m-2" fas icon="info-circle"></mdb-icon>
                             </span>
                         </div>
-                        <!-- <div class="col pt-3 text-right">
-                            <mdb-icon fas icon="search" class="m-2" style="cursor: pointer;"></mdb-icon><mdb-icon far icon="bell" class="m-2" style="cursor: pointer;"></mdb-icon> <mdb-icon class="hover m-2" fas icon="info-circle"></mdb-icon>
-                        </div> -->
                     </div>
                     <div class="row">
-                        <div class="col">
-                                  
+                        <div class="col"> 
+                            <!-- dashboard sub components are rendered here -->
                             <router-outlet>
-
                             </router-outlet>
                         </div>
                     </div>
@@ -100,7 +95,11 @@
                     </div>         
                 </div>
             </div>
-            
         </div>
     </div>
 </div>
+<footer class="sticky-bottom text-center mt-2">
+    <small class="text-primary pt-5 pb-3">
+        Loan &copy; 2020. Developed by <a class="text-dark" style="z-index: 1000 !important;" href="mailto:sumaila.bello@rocketmail.com">Bello Sumaila</a>
+    </small>
+</footer>
